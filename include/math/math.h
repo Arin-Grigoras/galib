@@ -1,8 +1,11 @@
 #ifndef __GALIB_MATH_H__
 #define __GALIB_MATH_H__
 
-#include "./essentials/types.h"
-#include "./essentials/util.h"
+#include "../essentials/types.h"
+#include "../essentials/util.h"
+
+//other math stuff
+#include "./vec2.h"
 
 
 #ifndef GLB_CONSTANTS
@@ -51,6 +54,9 @@
 
 
 namespace galib{
+
+    
+
     GLB_DEF glb_f32 degrees_to_radians(glb_f32 degrees);
     GLB_DEF glb_f32 radians_to_degrees(glb_f32 radians);
 

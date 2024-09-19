@@ -1,4 +1,4 @@
-#include "../include/math.h"
+#include "../include/math/math.h"
 
 
 namespace galib{
