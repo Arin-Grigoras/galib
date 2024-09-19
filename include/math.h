@@ -31,4 +31,21 @@
 #endif //GLB_CONSTANTS
 
 
+#ifndef glb_square
+#define glb_square(x) ((x) * (x))
+#endif //glb_square
+
+#ifndef glb_cube
+#define glb_cube (x) ((x) * (x) * (x))
+#endif //glb_cube
+
+#ifndef glb_sign
+#define glb_sign (x) ((x) >= 0.0f ? 1.0f : -1.0f)
+#endif //glb_sign
+
+#ifndef glb_sign0
+#define glb_sign0 (x) ((x == 0.0f) ? 0.0f : ((x) >= 0.0f ? 1.0f : -1.0f))
+
+
+
 #endif //__GALIB_MATH_H__
