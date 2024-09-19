@@ -1,9 +1,10 @@
 #include <iostream>
+#include "../include/galib.h"
 
 
 int main(void){
 
-    std::cout << "Hello world\n";
+    std::cout << GLB_PI << "\n";
 
     return 0;
 }
