@@ -45,7 +45,7 @@
 
 #ifndef glb_sign0
 #define glb_sign0 (x) ((x == 0.0f) ? 0.0f : ((x) >= 0.0f ? 1.0f : -1.0f))
-
+#endif
 
 
 #endif //__GALIB_MATH_H__
