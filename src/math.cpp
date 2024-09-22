@@ -48,7 +48,7 @@ namespace galib{
 
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
-    glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(galib::pow(x, 2) + galib::pow(y, 2)); }
+    glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(glb_square(x) + glb_square(y)); }
 
     glb_f32 floor(glb_f32 x) { return (float)((x >= 0.0f) ? (int)x              : (int)(x - 0.9999999999999999f)); }
     glb_f32 ceil(glb_f32 x)  { return (float)((x <  0.0f) ? (int)x              : ((int)x) + 1); }
