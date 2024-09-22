@@ -54,12 +54,10 @@
 
 
 namespace galib{
-
-    
-
     GLB_DEF glb_f32 degrees_to_radians(glb_f32 degrees);
     GLB_DEF glb_f32 radians_to_degrees(glb_f32 radians);
 
+    GLB_DEF glb_f32 exp(glb_f32 x);
 };
 
 

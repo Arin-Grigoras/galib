@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/galib.h"
+#include <cmath>
 
 
 int main(void){
@@ -12,6 +13,12 @@ int main(void){
     galib::Vec2d n;
 
     std::cout << n.getX() << '\n' << n.getY() << "\n";
+
+    std::cout << std::endl;
+
+
+    std::cout << galib::exp(2) << '\n';
+    std::cout << exp(2) << "\n";
 
     return 0;
 }
