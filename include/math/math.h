@@ -65,7 +65,7 @@ namespace galib{
 
     GLB_DEF glb_f32 floor(glb_f32 x);
     GLB_DEF glb_f32 ceil(glb_f32 x);
-
+    GLB_DEF glb_f32 round(glb_f32 x);
 };
 
 

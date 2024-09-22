@@ -44,4 +44,5 @@ namespace galib{
 
     glb_f32 floor(glb_f32 x) { return (float)((x >= 0.0f) ? (int)x              : (int)(x - 0.9999999999999999f)); }
     glb_f32 ceil(glb_f32 x)  { return (float)((x <  0.0f) ? (int)x              : ((int)x) + 1); }
+    glb_f32 alib_round(glb_f32 x) { return (float)((x >= 0.0f) ? galib::floor(x + 0.5f) : galib::ceil(x - 0.5f)); }
 };
