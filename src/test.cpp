@@ -31,5 +31,8 @@ int main(void){
     std::cout << std::endl;
     std::cout << glb_abs(-10) << "\n";
 
+    std::cout << std::endl;
+    std::cout << galib::exp2(2) << "\n";
+
     return 0;
 }
