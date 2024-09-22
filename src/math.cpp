@@ -47,6 +47,7 @@ namespace galib{
 
 
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
+    glb_f32 log(glb_f32 x) { return __builtin_logf(x); }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
     glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(glb_square(x) + glb_square(y)); }
 
