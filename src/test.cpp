@@ -28,5 +28,8 @@ int main(void){
     std::cout << galib::hypot(3, 4);
     std::cout << "\n";
 
+    std::cout << std::endl;
+    std::cout << glb_abs(-10) << "\n";
+
     return 0;
 }

@@ -60,6 +60,10 @@
 #define glb_max(x, y) ((x) > (y) ? (x) : (y))
 #endif //glb_max
 
+#ifndef glb_abs
+#define glb_abs(x) ((x) > 0 ? (x) : -(x))
+#endif //glb_abs
+
 
 namespace galib{
     GLB_DEF glb_f32 degrees_to_radians(glb_f32 degrees);
