@@ -38,6 +38,14 @@ namespace galib{
         return flipped ? 1.0f / r : r;
     }
 
+    glb_f32 sin(glb_f32 radians) { return __builtin_sinf(radians); }
+    glb_f32 cos(glb_f32 radians) { return __builtin_cosf(radians); }
+    glb_f32 tan(glb_f32 radians) { return __builtin_tanf(radians); }
+    glb_f32 arcsin(glb_f32 a) { return __builtin_asinf(a); }
+    glb_f32 arccos(glb_f32 a) { return __builtin_acosf(a); }
+    glb_f32 arctan(glb_f32 a) { return __builtin_atanf(a); }
+
+
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
     glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(galib::pow(x, 2) + galib::pow(y, 2)); }
