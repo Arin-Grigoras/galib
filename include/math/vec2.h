@@ -1,7 +1,7 @@
 #ifndef __GALIB_VEC2_H__
 #define __GALIB_VEC2_H__
 
-#include "../essentials/types.h"
+#include "./math.h"
 
 namespace galib{
     class Vec2d{
@@ -18,6 +18,9 @@ namespace galib{
 
             void setX(glb_f32 x_);
             void setY(glb_f32 y_);
+
+            glb_f32 max();
+            glb_f32 dot(Vec2d v0, Vec2d v1);
 
             Vec2d& operator+=(const Vec2d& rhs){
                 x += rhs.x;

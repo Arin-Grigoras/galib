@@ -7,6 +7,8 @@ namespace galib{
         this->y = y_;
     }
 
+    glb_f32 Vec2d::max() { return glb_max(this->x, this->y); }
+
     glb_f32 Vec2d::getX(){ return this->x; }
     glb_f32 Vec2d::getY(){ return this->y; }
     

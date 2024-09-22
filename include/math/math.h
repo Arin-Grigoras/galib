@@ -53,11 +53,11 @@
 #endif //glb_sign0
 
 #ifndef glb_min
-#define glb_min(x) ((x) < (y) ? (x) : (y))
+#define glb_min(x, y) ((x) < (y) ? (x) : (y))
 #endif //glb_min
 
 #ifndef glb_max
-#define glb_max(x) ((x) > (y) ? (x) : (y))
+#define glb_max(x, y) ((x) > (y) ? (x) : (y))
 #endif //glb_max
 
 
