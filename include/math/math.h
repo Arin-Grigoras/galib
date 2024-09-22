@@ -58,6 +58,7 @@ namespace galib{
     GLB_DEF glb_f32 radians_to_degrees(glb_f32 radians);
 
     GLB_DEF glb_f32 exp(glb_f32 x);
+    GLB_DEF glb_f32 pow(glb_f32 x, glb_f32 y);
 };
 
 

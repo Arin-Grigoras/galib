@@ -18,4 +18,23 @@ namespace galib{
         v.i = (int)(1056478197 - 6051102 * x);
         return u.f / v.f;
     }
+    //within 3 decimal places accurate
+    glb_f32 pow(glb_f32 x, glb_f32 y){
+        int flipped = 0, e;
+        glb_f32 f, r = 1.0f;
+        if(y < 0){
+            flipped = 1;
+            y = -y;
+        }
+        e = (int)y;
+        f = exp(y - e);
+
+        while(e){
+            if(e & 1) r *= x;
+            x *= x;
+            e >>= 1;
+        }
+        r *= f;
+        return flipped ? 1.0f / r : r;
+    }
 };

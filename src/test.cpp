@@ -20,5 +20,9 @@ int main(void){
     std::cout << galib::exp(2) << '\n';
     std::cout << exp(2) << "\n";
 
+    std::cout << std::endl;
+    std::cout << galib::pow(2.5256, 2) << "\n";
+    std::cout << pow(2.5256, 2);
+
     return 0;
 }
