@@ -24,5 +24,9 @@ int main(void){
     std::cout << galib::pow(2.5256, 2) << "\n";
     std::cout << pow(2.5256, 2);
 
+    std::cout << std::endl;
+    std::cout << galib::hypot(3, 4);
+    std::cout << "\n";
+
     return 0;
 }

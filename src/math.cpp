@@ -27,7 +27,7 @@ namespace galib{
             y = -y;
         }
         e = (int)y;
-        f = exp(y - e);
+        f = galib::exp(y - e);
 
         while(e){
             if(e & 1) r *= x;
@@ -37,4 +37,8 @@ namespace galib{
         r *= f;
         return flipped ? 1.0f / r : r;
     }
+
+    glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
+    glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
+    glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(galib::pow(x, 2) + galib::pow(y, 2)); }
 };

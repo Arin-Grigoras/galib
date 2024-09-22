@@ -59,6 +59,11 @@ namespace galib{
 
     GLB_DEF glb_f32 exp(glb_f32 x);
     GLB_DEF glb_f32 pow(glb_f32 x, glb_f32 y);
+    GLB_DEF glb_f32 sqrt(glb_f32 x);
+    GLB_DEF glb_f32 rsqrt(glb_f32 x);
+
+    GLB_DEF glb_f32 hypot(glb_f32 x, glb_f32 y);
+
 };
 
 
