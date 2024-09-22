@@ -19,16 +19,20 @@ namespace galib{
             void setX(glb_f32 x_);
             void setY(glb_f32 y_);
 
-
             Vec2d& operator+=(const Vec2d& rhs){
                 x += rhs.x;
                 y += rhs.y;
                 return *this;
             }
-
             Vec2d& operator-=(const Vec2d& rhs){
                 x -= rhs.x;
                 y -= rhs.y;
+                return *this;
+            }
+            //scalar multiplication
+            Vec2d& operator *=(const glb_f32 x_){
+                x *= x_;
+                y *= x_;
                 return *this;
             }
     };
