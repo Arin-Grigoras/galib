@@ -34,5 +34,8 @@ int main(void){
     std::cout << std::endl;
     std::cout << galib::exp2(2) << "\n";
 
+    std::cout << std::endl;
+    std::cout << galib::sqrt(-4) << '\n';
+
     return 0;
 }
