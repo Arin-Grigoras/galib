@@ -79,6 +79,7 @@ namespace galib{
 
     GLB_DEF glb_f32 exp(glb_f32 x);
     GLB_DEF glb_f32 exp2(glb_f32 x);
+    GLB_DEF glb_f32 expm1(glb_f32 x);
     GLB_DEF glb_f32 ldexp(glb_f32 x, glb_f32 y);
     GLB_DEF glb_f32 log(glb_f32 x);
     GLB_DEF glb_f32 pow(glb_f32 x, glb_f32 y);
@@ -91,6 +92,8 @@ namespace galib{
     GLB_DEF glb_f32 round(glb_f32 x);
 
     GLB_DEF glb_f32 remainder(glb_f32 x, glb_f32 y);
+    GLB_DEF glb_f32 copysign(glb_f32 x, glb_f32 y);
+    GLB_DEF glb_f64 fma(glb_f64 x, glb_f64 y, glb_f64 z);
 };
 
 

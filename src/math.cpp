@@ -48,6 +48,7 @@ namespace galib{
 
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
     glb_f32 exp2(glb_f32 x) { return __builtin_powf(2, x); }
+    glb_f32 expm1(glb_f32 x) { return __builtin_exp(x) - GLB_ONE;}
     glb_f32 ldexp(glb_f32 x, glb_f32 y) { return x * __builtin_powf(2, y); }
     glb_f32 log(glb_f32 x) { return __builtin_logf(x); }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
@@ -55,7 +56,9 @@ namespace galib{
 
     glb_f32 floor(glb_f32 x) { return (float)((x >= GLB_ZERO) ? (int)x              : (int)(x - 0.9999999999999999f)); }
     glb_f32 ceil(glb_f32 x)  { return (float)((x <  GLB_ZERO) ? (int)x              : ((int)x) + 1); }
-    glb_f32 alib_round(glb_f32 x) { return (float)((x >= 0.0f) ? galib::floor(x + 0.5f) : galib::ceil(x - 0.5f)); }
+    glb_f32 round(glb_f32 x) { return (float)((x >= 0.0f) ? galib::floor(x + 0.5f) : galib::ceil(x - 0.5f)); }
 
     glb_f32 remainder(glb_f32 x, glb_f32 y){ return galib::round(x/y); }
+    glb_f32 copysign(glb_f32 x, glb_f32 y){ return __builtin_copysign(x, y); }
+    glb_f64 fma(glb_f64 x, glb_f64 y, glb_f64 z){ return (x * y) - z;}
 };
