@@ -48,9 +48,26 @@ namespace galib{
 
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
     glb_f32 exp2(glb_f32 x) { return __builtin_powf(2, x); }
-    glb_f32 expm1(glb_f32 x) { return __builtin_exp(x) - GLB_ONE;}
+    glb_f32 expm1(glb_f32 x) { 
+        if(glb_abs(x) < 1e-5){
+            return x + 0.5*x*x;
+        }
+        return __builtin_exp(x) - GLB_ONE;
+    }
     glb_f32 ldexp(glb_f32 x, glb_f32 y) { return x * __builtin_powf(2, y); }
     glb_f32 log(glb_f32 x) { return __builtin_logf(x); }
+    glb_f64 log1p(glb_f64 x) {
+        if(x <= -1.0f){
+            std::stringstream os;
+            os << "Invalid input argument (" << x 
+            << "); must be greater than -1.0";
+            throw std::invalid_argument( os.str() );
+        }
+        if(abs(x) > 1e-4){
+            return galib::log(1.0f + x);
+        }
+        return (-0.5*x + 1.0) * x;
+    }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
     glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(glb_square(x) + glb_square(y)); }
 

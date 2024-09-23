@@ -6,6 +6,10 @@
 
 //other math stuff
 #include "./vec2.h"
+#include <sstream>
+#include <iostream>
+#include <stdexcept>
+
 
 
 #ifndef GLB_CONSTANTS
@@ -82,6 +86,7 @@ namespace galib{
     GLB_DEF glb_f32 expm1(glb_f32 x);
     GLB_DEF glb_f32 ldexp(glb_f32 x, glb_f32 y);
     GLB_DEF glb_f32 log(glb_f32 x);
+    GLB_DEF glb_f64 log1p(glb_f64 x);
     GLB_DEF glb_f32 pow(glb_f32 x, glb_f32 y);
     GLB_DEF glb_f32 sqrt(glb_f32 x);
     GLB_DEF glb_f32 rsqrt(glb_f32 x);
