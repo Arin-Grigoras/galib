@@ -2,12 +2,8 @@
 
 
 namespace galib{
-    glb_f32 degrees_to_radians(glb_f32 degrees){
-        return glb_degrees_to_radiansf(degrees);
-    }
-    glb_f32 radians_to_degrees(glb_f32 radians){
-        return (radians * 180) / GLB_PI;
-    }
+    glb_f32 degrees_to_radians(glb_f32 degrees){ return glb_degrees_to_radiansf(degrees); }
+    glb_f32 radians_to_degrees(glb_f32 radians){ return glb_radians_to_degreesf(radians); }
     //within 2 decimal places of accuracy
     glb_f32 exp(glb_f32 x){
         union {

@@ -7,7 +7,7 @@
 #endif //GLB_PI
 
 
-extern double glb_degrees_to_radiansf(float degrees);
+extern float glb_degrees_to_radiansf(float degrees);
 
 
 #endif //__GALIB__MATH_DEGREES_TO_RADIANS_H__

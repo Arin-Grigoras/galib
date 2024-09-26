@@ -3,7 +3,10 @@
 
 #include "../essentials/types.h"
 #include "../essentials/util.h"
+
+//math functions definitions
 #include "./degrees_to_radians.h"
+#include "./radians_to_degrees.h"
 
 //other math stuff
 #include "./vec2.h"

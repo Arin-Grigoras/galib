@@ -2,7 +2,7 @@
 
 
 #ifdef __STDC__
-    double glb_degrees_to_radiansf(float degrees)
+    float glb_degrees_to_radiansf(float degrees)
 #else
     double glb_degrees_to_radiansf(degrees)
     float degrees;
