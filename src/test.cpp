@@ -37,5 +37,12 @@ int main(void){
     std::cout << std::endl;
     std::cout << galib::sqrt(-4) << '\n';
 
+    std::cout << std::endl;
+    float param, fractpart, intpart;
+    param = -5.14;
+    fractpart = galib::modf(param, &intpart);
+    std::cout << param << " = " << intpart << " + " << fractpart << "\n";
+
+
     return 0;
 }

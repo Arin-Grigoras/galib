@@ -32,5 +32,6 @@ namespace galib{
 
     glb_f32 remainder(glb_f32 x, glb_f32 y){ return galib::round(x/y); }
     glb_f32 copysign(glb_f32 x, glb_f32 y){ return __builtin_copysign(x, y); }
+    glb_f32 modf(glb_f32 x, glb_f32 *intpart) { return glb_modff(x, intpart);}
     glb_f64 fma(glb_f64 x, glb_f64 y, glb_f64 z){ return (x * y) - z;}
 };

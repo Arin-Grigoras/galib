@@ -11,6 +11,7 @@
 #include "./pow.h"
 #include "./log1p.h"
 #include "./expm1.h"
+#include "./modf.h"
 
 //other math stuff
 #include "./vec2.h"
@@ -104,6 +105,7 @@ namespace galib{
 
     GLB_DEF glb_f32 remainder(glb_f32 x, glb_f32 y);
     GLB_DEF glb_f32 copysign(glb_f32 x, glb_f32 y);
+    GLB_DEF glb_f32 modf(glb_f32 x, glb_f32 *intpart);
     GLB_DEF glb_f64 fma(glb_f64 x, glb_f64 y, glb_f64 z);
 };
 
