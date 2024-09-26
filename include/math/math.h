@@ -7,12 +7,14 @@
 //math functions definitions
 #include "./degrees_to_radians.h"
 #include "./radians_to_degrees.h"
+#include "./exp.h"
+#include "./pow.h"
+#include "./log1p.h"
+#include "./expm1.h"
 
 //other math stuff
 #include "./vec2.h"
-#include <sstream>
-#include <iostream>
-#include <stdexcept>
+
 
 
 

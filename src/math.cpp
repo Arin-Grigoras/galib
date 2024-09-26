@@ -5,34 +5,9 @@ namespace galib{
     glb_f32 degrees_to_radians(glb_f32 degrees){ return glb_degrees_to_radiansf(degrees); }
     glb_f32 radians_to_degrees(glb_f32 radians){ return glb_radians_to_degreesf(radians); }
     //within 2 decimal places of accuracy
-    glb_f32 exp(glb_f32 x){
-        union {
-            glb_f32 f;
-            int i;
-        } u, v;
-        u.i = (int)(6051102 * x + 1056478197);
-        v.i = (int)(1056478197 - 6051102 * x);
-        return u.f / v.f;
-    }
+    glb_f32 exp(glb_f32 x){ return glb_expf(x); }
     //within 3 decimal places accurate
-    glb_f32 pow(glb_f32 x, glb_f32 y){
-        int flipped = 0, e;
-        glb_f32 f, r = 1.0f;
-        if(y < 0){
-            flipped = 1;
-            y = -y;
-        }
-        e = (int)y;
-        f = galib::exp(y - e);
-
-        while(e){
-            if(e & 1) r *= x;
-            x *= x;
-            e >>= 1;
-        }
-        r *= f;
-        return flipped ? GLB_ONE / r : r;
-    }
+    glb_f32 pow(glb_f32 x, glb_f32 y){ return glb_powf(x, y); }
 
     glb_f32 sin(glb_f32 radians) { return __builtin_sinf(radians); }
     glb_f32 cos(glb_f32 radians) { return __builtin_cosf(radians); }
@@ -44,26 +19,10 @@ namespace galib{
 
     glb_f32 sqrt(glb_f32 x) { return __builtin_sqrt(x); }
     glb_f32 exp2(glb_f32 x) { return __builtin_powf(2, x); }
-    glb_f32 expm1(glb_f32 x) { 
-        if(glb_abs(x) < 1e-5){
-            return x + 0.5*x*x;
-        }
-        return __builtin_exp(x) - GLB_ONE;
-    }
+    glb_f32 expm1(glb_f32 x) { return glb_expm1f(x); }
     glb_f32 ldexp(glb_f32 x, glb_f32 y) { return x * __builtin_powf(2, y); }
     glb_f32 log(glb_f32 x) { return __builtin_logf(x); }
-    glb_f64 log1p(glb_f64 x) {
-        if(x <= -1.0f){
-            std::stringstream os;
-            os << "Invalid input argument (" << x 
-            << "); must be greater than -1.0";
-            throw std::invalid_argument( os.str() );
-        }
-        if(abs(x) > 1e-4){
-            return galib::log(1.0f + x);
-        }
-        return (-0.5*x + 1.0) * x;
-    }
+    glb_f64 log1p(glb_f64 x) { return glb_log1pf(x); }
     glb_f32 rsqrt(glb_f32 x) { return 1.0f / galib::sqrt(x); }
     glb_f32 hypot(glb_f32 x, glb_f32 y) { return galib::sqrt(glb_square(x) + glb_square(y)); }
 
