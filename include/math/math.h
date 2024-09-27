@@ -12,6 +12,7 @@
 #include "./log1p.h"
 #include "./expm1.h"
 #include "./modf.h"
+#include "./copysign.h"
 
 //other math stuff
 #include "./vec2.h"

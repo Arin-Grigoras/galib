@@ -43,6 +43,10 @@ int main(void){
     fractpart = galib::modf(param, &intpart);
     std::cout << param << " = " << intpart << " + " << fractpart << "\n";
 
+    std::cout << std::endl;
+    std::cout << galib::copysign(-10, -2) << '\n';
+    std::cout << copysign(-10, -2) << '\n';
+
 
     return 0;
 }
