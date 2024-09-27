@@ -8,7 +8,7 @@
 
 
 #ifndef GLB_NO_MATH
-#include "./math.h"
+#include "./math/math.h"
 #endif //GLB_NO_MATH
 
 
